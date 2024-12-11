@@ -1,4 +1,14 @@
 /* 全局样式 */
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #2c3e50;
+    --background-color: #f5f7fa;
+    --text-color: #333;
+    --card-background: #ffffff;
+    --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --border-color: #e2e8f0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,112 +16,235 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f5f7fa;
-    color: #2d3748;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
-/* 头部样式 */
-header {
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+/* 导航栏样式 */
+.main-nav {
+    background-color: var(--card-background);
+    box-shadow: var(--card-shadow);
+    padding: 1rem 0;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
 }
 
-nav {
+.nav-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
+.nav-content h1 {
     font-size: 1.5rem;
-    font-weight: bold;
-    color: #4a5568;
+    color: var(--primary-color);
+    font-weight: 600;
 }
 
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.nav-links i {
+    margin-right: 0.5rem;
+    font-size: 0.9em;
+}
+
+/* 搜索框样式 */
 .search-box {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.search-box form {
     display: flex;
     gap: 0.5rem;
 }
 
 .search-box input {
-    padding: 0.5rem 1rem;
-    border: 1px solid #e2e8f0;
-    border-radius: 4px;
-    width: 300px;
-    font-size: 1rem;
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.95rem;
 }
 
 .search-box button {
-    padding: 0.5rem 1rem;
-    background-color: #4299e1;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--primary-color);
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
 .search-box button:hover {
-    background-color: #3182ce;
+    background-color: var(--secondary-color);
 }
 
-/* 主导航样式 */
-.main-nav {
+/* 主要内容区域 */
+main {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 2rem 1.5rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+}
+
+/* 卡片网格布局 */
+.featured-grid,
+.card-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.featured-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* 卡片样式 */
+.featured-card,
+.card {
+    background: var(--card-background);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.featured-card {
+    padding: 1.5rem;
+}
+
+.card {
+    padding: 1.25rem;
+}
+
+.featured-card:hover,
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.featured-content {
+    height: 100%;
+}
+
+/* 资源图标和标题样式 */
+.resource-header {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 1rem;
+    margin-bottom: 1rem;
 }
 
-.nav-content {
-    display: flex;
-    justify-content: space-between;
+.resource-icon {
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.2s ease;
 }
 
-.nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links a {
-    color: #4a5568;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: all 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.nav-links a:hover {
-    background-color: #edf2f7;
-}
-
-.nav-links a.active {
-    background-color: #4299e1;
+.resource-icon i {
+    font-size: 1.25rem;
     color: white;
+    line-height: 1;
 }
 
-.nav-links i {
+.card:hover .resource-icon,
+.featured-card:hover .resource-icon {
+    transform: scale(1.1);
+    background-color: var(--secondary-color);
+}
+
+.resource-header h3 {
+    margin: 0;
     font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
 }
 
+/* 描述文本 */
+.featured-card p,
+.card .description {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* 访问按钮 */
+.card .actions {
+    margin-top: auto;
+}
+
+.card .actions a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.card .actions a:hover {
+    background-color: var(--secondary-color);
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background-color: var(--card-background);
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* 响应式设计 */
 @media (max-width: 768px) {
     .nav-content {
         flex-direction: column;
@@ -119,140 +252,11 @@ nav {
     }
 
     .nav-links {
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
-}
-
-/* 主要内容区域 */
-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-.category {
-    margin-bottom: 3rem;
-}
-
-.category h2 {
-    margin-bottom: 1.5rem;
-    color: #2d3748;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.card {
-    background: white;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-    min-height: 300px;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.card img {
-    width: 50px;
-    height: 50px;
-    border-radius: 25%;
-    margin-bottom: 1rem;
-}
-
-.card h3 {
-    margin-bottom: 0.5rem;
-    color: #2d3748;
-}
-
-.card .brief {
-    color: #718096;
-    margin-bottom: 0.5rem;
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.card .description {
-    color: #4a5568;
-    margin-bottom: 1rem;
-    font-size: 0.85rem;
-    line-height: 1.4;
-    flex-grow: 1;
-}
-
-.card .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-    justify-content: center;
-}
-
-.card .tag {
-    background-color: #ebf4ff;
-    color: #4299e1;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    font-size: 0.75rem;
-}
-
-.card .price-tag {
-    background-color: #f0fff4;
-    color: #48bb78;
-}
-
-.card a {
-    display: inline-block;
-    padding: 0.5rem 1.5rem;
-    background-color: #4299e1;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-    margin-top: auto;
-}
-
-/* 页脚样式 */
-footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: #ffffff;
-    color: #718096;
-    border-top: 1px solid #e2e8f0;
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
         gap: 1rem;
     }
 
-    .search-box {
-        width: 100%;
-    }
-
-    .search-box input {
-        width: 100%;
-    }
-
-    .card-container {
+    .featured-grid,
+    .card-grid {
         grid-template-columns: 1fr;
     }
 }

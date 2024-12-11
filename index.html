@@ -3,323 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI导航 - 你的人工智能资源导航</title>
+    <title>Ferara - AI与教育资源集成平台</title>
+    <meta name="description" content="发现AI与教育的无限可能 - 精选全球顶级教育资源与AI工具">
     <link rel="stylesheet" href="css/style.css">
-    <!-- 使用Font Awesome图标 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.css">
 </head>
 <body>
     <header>
         <nav class="main-nav">
             <div class="nav-content">
-                <div class="logo">AI导航</div>
+                <h1>Ferara</h1>
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active"><i class="fas fa-robot"></i> AI导航</a></li>
-                    <li><a href="online-degrees.html"><i class="fas fa-graduation-cap"></i> 在线学位</a></li>
-                    <li><a href="homeschool.html"><i class="fas fa-home"></i> Homeschool</a></li>
+                    <li><a href="index.html" class="active"><i class="bi bi-robot"></i> AI资源</a></li>
+                    <li><a href="online-degrees.html"><i class="bi bi-mortarboard"></i> 在线学位</a></li>
+                    <li><a href="homeschool.html"><i class="bi bi-house"></i> 在家教育</a></li>
                 </ul>
             </div>
             <div class="search-box">
-                <input type="text" placeholder="搜索AI资源...">
-                <button><i class="fas fa-search"></i></button>
+                <input type="text" placeholder="搜索AI工具和教育资源...">
+                <button><i class="bi bi-search"></i></button>
             </div>
         </nav>
     </header>
 
     <main>
-        <!-- AI模型和服务 -->
-        <section class="category">
-            <h2><i class="fas fa-robot"></i> AI模型和服务</h2>
-            <div class="card-container">
-                <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="ChatGPT">
-                    <h3>ChatGPT</h3>
-                    <p class="brief">OpenAI开发的大型语言模型</p>
-                    <div class="tags">
-                        <span class="tag">自然语言处理</span>
-                        <span class="tag price-tag">部分免费</span>
+        <section class="featured-section">
+            <h2>精选推荐</h2>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="featured-content">
+                        <div class="resource-header">
+                            <span class="resource-icon">
+                                <i class="bi bi-robot"></i>
+                            </span>
+                            <h3>ChatGPT</h3>
+                        </div>
+                        <p>OpenAI开发的顶级AI语言模型，支持自然对话、写作、编程等多种任务</p>
+                        <div class="tags">
+                            <span class="tag premium">付费</span>
+                            <span class="tag">AI对话</span>
+                            <span class="tag">写作助手</span>
+                        </div>
+                        <div class="actions">
+                            <a href="https://chat.openai.com" target="_blank">访问网站</a>
+                        </div>
                     </div>
-                    <p class="description">ChatGPT是一个强大的AI语言模型，可以进行自然对话、回答问题、写作、编程等多种任务。免费版支持GPT-3.5，付费版支持GPT-4，支持联网和插件功能。</p>
-                    <a href="https://chat.openai.com" target="_blank">访问</a>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-content">
+                        <div class="resource-header">
+                            <span class="resource-icon">
+                                <i class="bi bi-mortarboard"></i>
+                            </span>
+                            <h3>Coursera</h3>
+                        </div>
+                        <p>全球顶级大学在线课程平台，提供学位项目和专业证书</p>
+                        <div class="tags">
+                            <span class="tag">在线学习</span>
+                            <span class="tag">学位课程</span>
+                            <span class="tag">证书项目</span>
+                        </div>
+                        <div class="actions">
+                            <a href="https://www.coursera.org" target="_blank">访问网站</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-content">
+                        <div class="resource-header">
+                            <span class="resource-icon">
+                                <i class="bi bi-brush"></i>
+                            </span>
+                            <h3>Midjourney</h3>
+                        </div>
+                        <p>领先的AI图像生成工具，创作高质量艺术作品和设计素材</p>
+                        <div class="tags">
+                            <span class="tag premium">付费</span>
+                            <span class="tag">AI绘画</span>
+                            <span class="tag">设计</span>
+                        </div>
+                        <div class="actions">
+                            <a href="https://www.midjourney.com" target="_blank">访问网站</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category" id="ai-models">
+            <h2>AI核心模型</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="resource-header">
+                        <span class="resource-icon">
+                            <i class="bi bi-cpu"></i>
+                        </span>
+                        <h3>Claude</h3>
+                    </div>
+                    <p class="description">Anthropic开发的AI助手，擅长写作、分析和编程，支持更长上下文</p>
+                    <div class="tags">
+                        <span class="tag premium">付费</span>
+                        <span class="tag">AI对话</span>
+                        <span class="tag">长文本</span>
+                    </div>
+                    <div class="actions">
+                        <a href="https://claude.ai" target="_blank">访问网站</a>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="Claude">
-                    <h3>Claude</h3>
-                    <p class="brief">Anthropic开发的AI助手</p>
-                    <div class="tags">
-                        <span class="tag">自然语言处理</span>
-                        <span class="tag">文档分析</span>
-                        <span class="tag price-tag">部分免费</span>
+                    <div class="resource-header">
+                        <span class="resource-icon">
+                            <i class="bi bi-google"></i>
+                        </span>
+                        <h3>Gemini</h3>
                     </div>
-                    <p class="description">Claude以其强大的分析能力和长文本处理能力著称。支持文档上传、代码分析、数学计算等功能。相比其他AI助手，Claude的回答更加谨慎和准确。</p>
-                    <a href="https://claude.ai" target="_blank">访问</a>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="Midjourney">
-                    <h3>Midjourney</h3>
-                    <p class="brief">AI图像生成工具</p>
+                    <p class="description">Google最新AI模型，支持多模态理解和生成</p>
                     <div class="tags">
+                        <span class="tag">免费</span>
+                        <span class="tag">多模态</span>
+                        <span class="tag">AI助手</span>
+                    </div>
+                    <div class="actions">
+                        <a href="https://gemini.google.com" target="_blank">访问网站</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category" id="ai-creation">
+            <h2>AI创作工具</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="resource-header">
+                        <span class="resource-icon">
+                            <i class="bi bi-image"></i>
+                        </span>
+                        <h3>DALL·E 3</h3>
+                    </div>
+                    <p class="description">OpenAI最新图像生成模型，支持精确的文本描述生成图像</p>
+                    <div class="tags">
+                        <span class="tag premium">付费</span>
                         <span class="tag">图像生成</span>
-                        <span class="tag">艺术创作</span>
-                        <span class="tag price-tag">付费</span>
+                        <span class="tag">设计</span>
                     </div>
-                    <p class="description">Midjourney是目前最受欢迎的AI绘画工具之一，以其独特的艺术风格和高质量输出著称。通过Discord使用，支持自然语言描述生成图片，适合艺术创作和商业设计。</p>
-                    <a href="https://www.midjourney.com" target="_blank">访问</a>
+                    <div class="actions">
+                        <a href="https://openai.com/dall-e-3" target="_blank">访问网站</a>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="DALL-E">
-                    <h3>DALL-E</h3>
-                    <p class="brief">OpenAI的AI图像生成模型</p>
-                    <div class="tags">
-                        <span class="tag">图像生成</span>
-                        <span class="tag">图像编辑</span>
-                        <span class="tag price-tag">付费积分制</span>
+                    <div class="resource-header">
+                        <span class="resource-icon">
+                            <i class="bi bi-palette"></i>
+                        </span>
+                        <h3>Stable Diffusion</h3>
                     </div>
-                    <p class="description">DALL-E 3是OpenAI最新的图像生成模型，支持精确的文本描述生成图像，还可以进行图像编辑和延伸。与ChatGPT集成，可以直接在对话中生成图片。</p>
-                    <a href="https://labs.openai.com" target="_blank">访问</a>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="Stable Diffusion">
-                    <h3>Stable Diffusion</h3>
-                    <p class="brief">开源的AI图像生成模型</p>
+                    <p class="description">开源图像生成模型，支持本地部署和自定义训练</p>
                     <div class="tags">
                         <span class="tag">开源</span>
-                        <span class="tag">图像生成</span>
-                        <span class="tag price-tag">免费</span>
+                        <span class="tag">AI绘画</span>
+                        <span class="tag">可定制</span>
                     </div>
-                    <p class="description">Stable Diffusion是一个强大的开源图像生成模型，可以本地部署。支持文生图、图生图、图片修复等功能。有丰富的社区模型和插件生态系统。</p>
-                    <a href="https://stability.ai" target="_blank">访问</a>
+                    <div class="actions">
+                        <a href="https://stability.ai" target="_blank">访问网站</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="resource-header">
+                        <span class="resource-icon">
+                            <i class="bi bi-file-text"></i>
+                        </span>
+                        <h3>Runway</h3>
+                    </div>
+                    <p class="description">专业的AI视频创作平台，支持视频编辑和特效生成</p>
+                    <div class="tags">
+                        <span class="tag premium">付费</span>
+                        <span class="tag">视频制作</span>
+                        <span class="tag">特效</span>
+                    </div>
+                    <div class="actions">
+                        <a href="https://runway.ml" target="_blank">访问网站</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- AI开发工具 -->
-        <section class="category">
-            <h2><i class="fas fa-code"></i> AI开发工具</h2>
-            <div class="card-container">
+        <section class="category" id="ai-productivity">
+            <h2>AI效率工具</h2>
+            <div class="card-grid">
                 <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="TensorFlow">
-                    <h3>TensorFlow</h3>
-                    <p>Google的开源机器学习框架</p>
-                    <a href="https://www.tensorflow.org" target="_blank">访问</a>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="PyTorch">
-                    <h3>PyTorch</h3>
-                    <p>Facebook的深度学习框架</p>
-                    <a href="https://pytorch.org" target="_blank">访问</a>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="Hugging Face">
-                    <h3>Hugging Face</h3>
-                    <p>AI模型和数据集平台</p>
-                    <a href="https://huggingface.co" target="_blank">访问</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- AI学习资源 -->
-        <section class="category">
-            <h2><i class="fas fa-graduation-cap"></i> AI学习资源</h2>
-            <div class="card-container">
-                <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="Coursera">
-                    <h3>Coursera</h3>
-                    <p>AI和机器学习在线课程</p>
-                    <a href="https://www.coursera.org" target="_blank">访问</a>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="Fast.ai">
-                    <h3>Fast.ai</h3>
-                    <p>实用深度学习课程</p>
-                    <a href="https://www.fast.ai" target="_blank">访问</a>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="kaggle">
-                    <h3>Kaggle</h3>
-                    <p>数据科学和机器学习社区</p>
-                    <a href="https://www.kaggle.com" target="_blank">访问</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- AI办公工具 -->
-        <section class="category">
-            <h2><i class="fas fa-briefcase"></i> AI办公工具</h2>
-            <div class="card-container">
-                <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="Notion AI">
-                    <h3>Notion AI</h3>
-                    <p class="brief">智能笔记和写作助手</p>
-                    <div class="tags">
-                        <span class="tag">写作辅助</span>
-                        <span class="tag">笔记管理</span>
-                        <span class="tag price-tag">部分免费</span>
+                    <div class="resource-header">
+                        <span class="resource-icon">
+                            <i class="bi bi-file-text"></i>
+                        </span>
+                        <h3>Notion AI</h3>
                     </div>
-                    <p class="description">Notion AI将人工智能集成到笔记和文档中，可以帮助总结文本、改写段落、生成大纲、翻译内容等。完美集成在Notion的笔记系统中，提升写作和内容创作效率。</p>
-                    <a href="https://notion.so" target="_blank">访问</a>
+                    <p class="description">集成AI功能的笔记和知识管理工具，支持写作和内容生成</p>
+                    <div class="tags">
+                        <span class="tag premium">付费</span>
+                        <span class="tag">笔记</span>
+                        <span class="tag">协作</span>
+                    </div>
+                    <div class="actions">
+                        <a href="https://notion.so" target="_blank">访问网站</a>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="Jasper">
-                    <h3>Jasper</h3>
-                    <p class="brief">AI文案和内容创作平台</p>
-                    <div class="tags">
-                        <span class="tag">内容创作</span>
-                        <span class="tag">营销文案</span>
-                        <span class="tag price-tag">付费</span>
+                    <div class="resource-header">
+                        <span class="resource-icon">
+                            <i class="bi bi-code-square"></i>
+                        </span>
+                        <h3>Codeium</h3>
                     </div>
-                    <p class="description">Jasper专注于商业写作和营销内容创作，提供多种写作模板和AI助手。支持博客文章、社交媒体帖子、营销文案等多种内容类型的生成，并支持多种语言。</p>
-                    <a href="https://www.jasper.ai" target="_blank">访问</a>
+                    <p class="description">AI代码助手，支持多种编程语言和IDE，提供智能代码补全</p>
+                    <div class="tags">
+                        <span class="tag">免费</span>
+                        <span class="tag">编程</span>
+                        <span class="tag">开发工具</span>
+                    </div>
+                    <div class="actions">
+                        <a href="https://codeium.com" target="_blank">访问网站</a>
+                    </div>
                 </div>
                 <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="Copy.ai">
-                    <h3>Copy.ai</h3>
-                    <p class="brief">AI营销文案生成工具</p>
-                    <div class="tags">
-                        <span class="tag">营销文案</span>
-                        <span class="tag">社交媒体</span>
-                        <span class="tag price-tag">部分免费</span>
+                    <div class="resource-header">
+                        <span class="resource-icon">
+                            <i class="bi bi-pen"></i>
+                        </span>
+                        <h3>Jasper</h3>
                     </div>
-                    <p class="description">Copy.ai专注于营销文案生成，提供多种文案模板。可以生成产品描述、广告文案、邮件内容、标题等。新用户可以免费试用，适合小型企业和个人创作者。</p>
-                    <a href="https://www.copy.ai" target="_blank">访问</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- AI创意工具 -->
-        <section class="category">
-            <h2><i class="fas fa-paint-brush"></i> AI创意工具</h2>
-            <div class="card-container">
-                <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="Runway">
-                    <h3>Runway</h3>
-                    <p class="brief">AI视频编辑和生成工具</p>
+                    <p class="description">专业的AI写作助手，适合营销内容和文案创作</p>
                     <div class="tags">
-                        <span class="tag">视频编辑</span>
-                        <span class="tag">视频生成</span>
-                        <span class="tag price-tag">付费</span>
+                        <span class="tag premium">付费</span>
+                        <span class="tag">写作</span>
+                        <span class="tag">营销</span>
                     </div>
-                    <p class="description">Runway是一个革命性的AI视频编辑平台，支持视频生成、背景移除、动作迁移等高级功能。适合创意工作者和视频制作团队，提供专业级的AI视频处理能力。</p>
-                    <a href="https://runway.ml" target="_blank">访问</a>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="Mubert">
-                    <h3>Mubert</h3>
-                    <p class="brief">AI音乐生成平台</p>
-                    <div class="tags">
-                        <span class="tag">音乐生成</span>
-                        <span class="tag">背景音乐</span>
-                        <span class="tag price-tag">部分免费</span>
+                    <div class="actions">
+                        <a href="https://jasper.ai" target="_blank">访问网站</a>
                     </div>
-                    <p class="description">Mubert使用AI技术生成独特的音乐作品，可用于视频背景、游戏配乐、播客等。支持根据心情、场景、风格生成音乐，提供商业版权许可。</p>
-                    <a href="https://mubert.com" target="_blank">访问</a>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="Leonardo.ai">
-                    <h3>Leonardo.ai</h3>
-                    <p class="brief">AI艺术创作平台</p>
-                    <div class="tags">
-                        <span class="tag">艺术创作</span>
-                        <span class="tag">游戏素材</span>
-                        <span class="tag price-tag">部分免费</span>
-                    </div>
-                    <p class="description">Leonardo.ai专注于游戏和创意产业的AI图像生成。提供角色设计、场景创作、纹理生成等特色功能。支持批量生成和自定义模型训练。</p>
-                    <a href="https://leonardo.ai" target="_blank">访问</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- AI教育资源 -->
-        <section class="category">
-            <h2><i class="fas fa-chalkboard-teacher"></i> AI教育资源</h2>
-            <div class="card-container">
-                <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="DeepLearning.AI">
-                    <h3>DeepLearning.AI</h3>
-                    <p class="brief">吴恩达的深度学习课程平台</p>
-                    <div class="tags">
-                        <span class="tag">在线课程</span>
-                        <span class="tag">深度学习</span>
-                        <span class="tag price-tag">付费</span>
-                    </div>
-                    <p class="description">由AI领域专家吴恩达创建的在线学习平台，提供深度学习、机器学习、AI工程等专业课程。课程结构清晰，实践性强，适合想系统学习AI的学习者。</p>
-                    <a href="https://www.deeplearning.ai" target="_blank">访问</a>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="Elements of AI">
-                    <h3>Elements of AI</h3>
-                    <p class="brief">免费AI基础课程</p>
-                    <div class="tags">
-                        <span class="tag">入门课程</span>
-                        <span class="tag">AI基础</span>
-                        <span class="tag price-tag">免费</span>
-                    </div>
-                    <p class="description">由赫尔辛基大学开发的免费AI入门课程，覆盖AI基础概念、机器学习原理、AI应用等内容。无需编程基础，适合所有想了解AI的人。</p>
-                    <a href="https://www.elementsofai.com" target="_blank">访问</a>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="AI4ALL">
-                    <h3>AI4ALL</h3>
-                    <p class="brief">AI教育开放学习平台</p>
-                    <div class="tags">
-                        <span class="tag">开放教育</span>
-                        <span class="tag">实践项目</span>
-                        <span class="tag price-tag">免费</span>
-                    </div>
-                    <p class="description">致力于提供平等的AI教育机会，提供免费的AI课程和实践项目。课程内容包括AI伦理、机器学习基础、数据科学等，强调实践和项目导向学习。</p>
-                    <a href="https://ai-4-all.org" target="_blank">访问</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- AI新闻资讯 -->
-        <section class="category">
-            <h2><i class="fas fa-newspaper"></i> AI新闻资讯</h2>
-            <div class="card-container">
-                <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="MIT AI Review">
-                    <h3>MIT AI Review</h3>
-                    <p class="brief">麻省理工AI技术评论</p>
-                    <div class="tags">
-                        <span class="tag">技术评论</span>
-                        <span class="tag">深度报道</span>
-                        <span class="tag price-tag">部分免费</span>
-                    </div>
-                    <p class="description">MIT Technology Review的AI专栏，提供高质量的AI技术评论和深度报道。涵盖最新AI研究、技术趋势、产业动态等，是了解AI前沿发展的重要来源。</p>
-                    <a href="https://www.technologyreview.com/topic/artificial-intelligence/" target="_blank">访问</a>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="AI News">
-                    <h3>AI News</h3>
-                    <p class="brief">人工智能新闻聚合</p>
-                    <div class="tags">
-                        <span class="tag">新闻聚合</span>
-                        <span class="tag">行业动态</span>
-                        <span class="tag price-tag">免费</span>
-                    </div>
-                    <p class="description">全球AI新闻的聚合平台，实时更新AI领域的最新动态。包括技术突破、企业动态、政策法规等多个维度的新闻报道，方便快速了解AI行业发展。</p>
-                    <a href="https://artificialintelligence-news.com" target="_blank">访问</a>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/50" alt="Synced">
-                    <h3>Synced</h3>
-                    <p class="brief">机器之心-AI科技媒体</p>
-                    <div class="tags">
-                        <span class="tag">科技媒体</span>
-                        <span class="tag">中文资讯</span>
-                        <span class="tag price-tag">免费</span>
-                    </div>
-                    <p class="description">国内领先的AI科技媒体，提供AI领域的新闻、技术解读和产业分析。同时运营英文版网站，连接中外AI社区，是了解中国AI发展的重要窗口。</p>
-                    <a href="https://syncedreview.com" target="_blank">访问</a>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p> 2024 AI - 更新时间：2024-12-10</p>
+        <p> 2024 Ferara - 更新时间：2024-12-10</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
