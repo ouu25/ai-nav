@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ferara.net/sitemap.xml
